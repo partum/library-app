@@ -1,0 +1,30 @@
+@media only screen and (min-width: 376px) {
+}
+body {
+  margin: 0px;
+}
+h1 {
+  font-family: "Rosario", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  grid-area: 2/1/3/5;
+}
+h2 {
+  font-family: Rosario;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  color: #17bebb;
+}
+
+#container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+  text-align: center;
+  gap: 20px;
+}
+
+/*grid may not be the best idea*/
