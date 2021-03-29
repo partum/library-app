@@ -15,10 +15,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <div id='container'>
-            <h1>Moriarty Library</h1>
-    <h2>Serving readers since 1994</h2>
-</div>
+        
+        <h1>Moriarty Library</h1>
+        <h2>Serving readers since 1994</h2>
+        <div id='border'><h2 style="color: black">Newest Additions</h2>
+            <div id='book-list'>k</div>
+        </div>
     
 
 <?php
