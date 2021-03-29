@@ -22,7 +22,7 @@
         </button>
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
-        <div id='border'><h2 style="color: black">Newest Additions</h2>
+        <div id='border'><h2 id='black-h2'>Newest Additions</h2>
             <div id='book-list'>k</div>
         </div>
     

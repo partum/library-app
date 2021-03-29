@@ -1,14 +1,18 @@
 body {
   margin: 0px;
   padding: 49px 45px;
-  text-align: center;
 }
 
 h1 {
   font-family: "Rosario", sans-serif;
   font-weight: 600;
   font-size: 36px;
-  margin: 0px;
+  position: absolute;
+  top: 134px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  margin: 0;
 }
 h2 {
   font-family: Rosario;
@@ -18,6 +22,12 @@ h2 {
   line-height: 32px;
   color: #17bebb;
   margin: 0px;
+  position: absolute;
+  top: 183px;
+}
+#black-h2 {
+  color: black;
+  position: static;
 }
 #border {
   padding: 49px 45px 0px 45px;
@@ -37,12 +47,14 @@ input {
   font-family: Rosario;
   border: 1px solid #17bebb;
   border-radius: 10px;
-  margin-bottom: 49px;
   height: 30px;
+  position: absolute;
+  top: 49px;
+  left: 45px;
 }
 button {
-  height: 31px;
-  width: 31px;
+  height: 32px;
+  width: 32px;
   font-size: 31px;
   color: #faa916;
   border: none;
@@ -59,5 +71,24 @@ button:hover {
   body {
     padding: 87px 122px;
     text-align: left;
+  }
+  h1 {
+    top: 87px;
+    left: 122px;
+    width: initial;
+  }
+  h2 {
+    top: 123px;
+    left: 122px;
+  }
+  input {
+    top: 87px;
+    right: 200px;
+    width: 25vw;
+    left: initial;
+  }
+  button {
+    top: 87px;
+    right: 122px;
   }
 }
