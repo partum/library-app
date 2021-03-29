@@ -13,9 +13,13 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
-        
+        <input type="text" placeholder="Search for a book...">
+        <button>
+            <i class="fas fa-user-circle"></i>
+        </button>
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
         <div id='border'><h2 style="color: black">Newest Additions</h2>
