@@ -16,54 +16,56 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
-        <input type="text" placeholder="Search for a book...">
-        <button>
-            <i class="fas fa-user-circle"></i>
-        </button>
-        <h1>Moriarty Library</h1>
-        <h2>Serving readers since 1994</h2>
-        <div id='border'><h2 id='black-h2'>Newest Additions</h2>
-            <div id='book-list'>
-                <article>
-                    <img src="dummybook.jpg" alt="book cover">
-                    <span>
-                        <p>Test Title</p>
-                        <p>Author Name</p>
-                    </span>
-                </article>
-                <article>
-                    <img src="dummybook.jpg" alt="book cover">
-                    <span>
-                        <p>Test Title</p>
-                        <p>Author Name</p>
-                    </span>
-                </article>
-                <article>
-                    <img src="dummybook.jpg" alt="book cover">
-                    <span>
-                        <p>Test Title</p>
-                        <p>Author Name</p>
-                    </span>
-                </article>
-                <article>
-                    <img src="dummybook.jpg" alt="book cover">
-                    <span>
-                        <p>Test Title</p>
-                        <p>Author Name</p>
-                    </span>
-                </article>
-                <article>
-                    <img src="dummybook.jpg" alt="book cover">
-                    <span>
-                        <p>Test Title</p>
-                        <p>Author Name</p>
-                    </span>
-                </article>
-                
+        
+            <input type="text" placeholder="Search for a book...">
+            <button onClick = loginMenu()>
+                <i class="fas fa-user-circle"></i>
+            </button>
+            <h1>Moriarty Library</h1>
+            <h2>Serving readers since 1994</h2>
+            <div id='border'><h2 id='black-h2'>Newest Additions</h2>
+                <div id='book-list'>
+                    <article>
+                        <img src="dummybook.jpg" alt="book cover">
+                        <span>
+                            <p>Test Title</p>
+                            <p>Author Name</p>
+                        </span>
+                    </article>
+                    <article>
+                        <img src="dummybook.jpg" alt="book cover">
+                        <span>
+                            <p>Test Title</p>
+                            <p>Author Name</p>
+                        </span>
+                    </article>
+                    <article>
+                        <img src="dummybook.jpg" alt="book cover">
+                        <span>
+                            <p>Test Title</p>
+                            <p>Author Name</p>
+                        </span>
+                    </article>
+                    <article>
+                        <img src="dummybook.jpg" alt="book cover">
+                        <span>
+                            <p>Test Title</p>
+                            <p>Author Name</p>
+                        </span>
+                    </article>
+                    <article>
+                        <img src="dummybook.jpg" alt="book cover">
+                        <span>
+                            <p>Test Title</p>
+                            <p>Author Name</p>
+                        </span>
+                    </article>
+                  
+                </div>
             </div>
-        </div>
+        
     
-
+            <span id='overlay'></span>  
 <?php
 echo "Hello World!";
 ?>
