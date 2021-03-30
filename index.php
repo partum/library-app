@@ -45,6 +45,21 @@
                         <p>Author Name</p>
                     </span>
                 </article>
+                <article>
+                    <img src="dummybook.jpg" alt="book cover">
+                    <span>
+                        <p>Test Title</p>
+                        <p>Author Name</p>
+                    </span>
+                </article>
+                <article>
+                    <img src="dummybook.jpg" alt="book cover">
+                    <span>
+                        <p>Test Title</p>
+                        <p>Author Name</p>
+                    </span>
+                </article>
+                
             </div>
         </div>
     

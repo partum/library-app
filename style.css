@@ -77,12 +77,13 @@ img {
 }
 p {
   font-family: Rosario;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
   margin: 0;
+}
+article {
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 376px) {
@@ -112,15 +113,16 @@ p {
   img {
     height: 160px;
     width: 122px;
-    float: left;
+    margin-right: 11px;
   }
   #book-list {
-    padding: 14px 22px;
-  }
-  span {
-    float: right;
+    padding: 14px 0 14px 22px;
   }
   article {
     height: 170px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 22px;
+    margin-bottom: 0px;
   }
 }
