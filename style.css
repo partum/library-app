@@ -44,6 +44,7 @@ h2 {
   padding: 20px 23px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 input {
   width: 197px;
@@ -74,6 +75,16 @@ img {
   height: 118px;
   width: 80px;
 }
+p {
+  font-family: Rosario;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
 @media only screen and (min-width: 376px) {
   body {
     padding: 87px 122px;
@@ -101,8 +112,15 @@ img {
   img {
     height: 160px;
     width: 122px;
+    float: left;
   }
   #book-list {
     padding: 14px 22px;
+  }
+  span {
+    float: right;
+  }
+  article {
+    height: 170px;
   }
 }
