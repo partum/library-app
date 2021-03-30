@@ -41,6 +41,9 @@ h2 {
   background: white;
   border-radius: 10px;
   height: 600px;
+  padding: 20px 23px;
+  display: flex;
+  flex-wrap: wrap;
 }
 input {
   width: 197px;
@@ -67,6 +70,10 @@ button {
 button:hover {
   cursor: pointer;
 }
+img {
+  height: 118px;
+  width: 80px;
+}
 @media only screen and (min-width: 376px) {
   body {
     padding: 87px 122px;
@@ -90,5 +97,12 @@ button:hover {
   button {
     top: 87px;
     right: 122px;
+  }
+  img {
+    height: 160px;
+    width: 122px;
+  }
+  #book-list {
+    padding: 14px 22px;
   }
 }

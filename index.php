@@ -23,7 +23,29 @@
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
         <div id='border'><h2 id='black-h2'>Newest Additions</h2>
-            <div id='book-list'>k</div>
+            <div id='book-list'>
+                <article>
+                    <img src="dummybook.jpg" alt="book cover">
+                    <span>
+                        <p>Test Title</p>
+                        <p>Author Name</p>
+                    </span>
+                </article>
+                <article>
+                    <img src="dummybook.jpg" alt="book cover">
+                    <span>
+                        <p>Test Title</p>
+                        <p>Author Name</p>
+                    </span>
+                </article>
+                <article>
+                    <img src="dummybook.jpg" alt="book cover">
+                    <span>
+                        <p>Test Title</p>
+                        <p>Author Name</p>
+                    </span>
+                </article>
+            </div>
         </div>
     
 
