@@ -17,8 +17,8 @@
     </head>
     <body>
         
-            <input type="text" placeholder="Search for a book...">
-            <button onClick = loginMenu()>
+            <input type="text" placeholder="Search for a book..." id='search'>
+            <button onClick = loginMenu() id='login-button'>
                 <i class="fas fa-user-circle"></i>
             </button>
             <h1>Moriarty Library</h1>
@@ -63,9 +63,14 @@
                   
                 </div>
             </div>
-        
-    
             <span id='overlay'></span>  
+            <div class="form" id='login-menu'>
+                <form class="login-form">
+                    <input type="text" placeholder="username"/>
+                    <input type="password" placeholder="password"/>
+                    <button>login</button>
+                </form>
+  </div>
 <?php
 echo "Hello World!";
 ?>

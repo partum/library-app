@@ -12,7 +12,7 @@ body {
   height: 100%;
   display: none; /*or block*/
   z-index: 5;
-  background-color: rgba(92, 65, 65, 0.336);
+  background-color: rgba(92, 65, 65, 0.4);
 }
 h1 {
   font-family: "Rosario", sans-serif;
@@ -57,7 +57,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
-input {
+#search {
   width: 197px;
   font-family: Rosario;
   border: 1px solid #17bebb;
@@ -67,7 +67,7 @@ input {
   top: 49px;
   left: 45px;
 }
-button {
+#login-button {
   height: 32px;
   width: 32px;
   font-size: 31px;
@@ -79,7 +79,7 @@ button {
   top: 49px;
   right: 45px;
 }
-button:hover {
+#login-button:hover {
   cursor: pointer;
 }
 img {
@@ -96,6 +96,98 @@ p {
 article {
   margin-bottom: 20px;
 }
+#login-menu {
+  width: 300px;
+  top: 10vh;
+  right: 7px;
+  display: none;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  padding: 8%;
+}
+
+.form {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: Rosario;
+  border-radius: 10px;
+
+  width: 100%;
+
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #17bebb;
+}
+.form button {
+  font-family: Rosario;
+  text-transform: uppercase;
+  outline: 0;
+  background: #faa916;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #17bebb;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #ef3b3a;
+}
 
 @media only screen and (min-width: 376px) {
   body {
@@ -111,13 +203,13 @@ article {
     top: 123px;
     left: 122px;
   }
-  input {
+  #search {
     top: 87px;
     right: 200px;
     width: 25vw;
     left: initial;
   }
-  button {
+  #login-button {
     top: 87px;
     right: 122px;
   }
@@ -135,5 +227,10 @@ article {
     flex-direction: row;
     margin-right: 22px;
     margin-bottom: 0px;
+  }
+  #login-menu {
+    top: -90vh;
+    position: relative;
+    margin: auto;
   }
 }
