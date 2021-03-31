@@ -66,17 +66,15 @@
             <span id='overlay'></span>  
             <div class="form" id='login-menu'>
                 <form class="login-form">
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
+                    <input type="text" placeholder="pat OR lib"/>
+                    <input type="password" placeholder="123"/>
                     <button>login</button>
                 </form>
   </div>
 <?php
 echo "Hello World!";
 ?>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        
         
         <script src="script.js" async defer></script>
     </body>
