@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <?php include("login.php")?>
     </head>
     <body>
         
@@ -65,10 +66,15 @@
             </div>
             <span id='overlay'></span>  
             <div class="form" id='login-menu'>
-                <form class="login-form">
-                    <input type="text" placeholder="pat OR lib"/>
+                <?php 
+                    if(!empty($login_err)){
+                    echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                    }        
+                ?>
+                <form action="login.php" method="post">
+                    <input type="text" name="username" placeholder="pat OR lib" value="<?php echo $username; ?>"/>
                     <input type="password" placeholder="123"/>
-                    <button>login</button>
+                    <button type="submit">login</button>
                 </form>
   </div>
 <?php
