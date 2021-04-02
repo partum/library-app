@@ -123,7 +123,7 @@ article {
   border: 1px solid #17bebb;
 }
 .form button {
-  font-family: Rosario;
+  font-family: "Rosario";
   text-transform: uppercase;
   outline: 0;
   background: #faa916;
@@ -147,10 +147,7 @@ article {
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
-  color: #4caf50;
-  text-decoration: none;
-}
+
 .form .register-form {
   display: none;
 }
@@ -188,7 +185,14 @@ article {
 .container .info span .fa {
   color: #ef3b3a;
 }
-
+a {
+  color: #17bebb;
+  text-decoration: none;
+}
+a:hover {
+  color: #faa916;
+  cursor: pointer;
+}
 @media only screen and (min-width: 376px) {
   body {
     padding: 87px 122px;
