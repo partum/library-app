@@ -11,79 +11,35 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 // Include config file
 require_once "config.php";
  
-// Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = $login_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
-    } else{
-        $username = trim($_POST["username"]);
-    }
-    
-    // Check if password is empty
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-    // Validate credentials
-    if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
-        
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
-            // Set parameters
-            $param_username = $username;
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Store result
-                mysqli_stmt_store_result($stmt);
-                
-                // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){                    
-                    // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                    if(mysqli_stmt_fetch($stmt)){
-                        if(strcmp($password, $hashed_password) == 0){
-                            // Password is correct, so start a new session
-                            session_start();
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
-                            // Redirect user to welcome page
-                            header("location: welcome.php");
-                        } else{
-                            // Password is not valid, display a generic error message
-                            $login_err = "Invalid password.";
-                        }
-                    }
-                } else{
-                    // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
-                }
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
+if ($stmt = $link->prepare('SELECT id, password FROM users WHERE username = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+	$stmt->bind_param('s', $_POST['username']);
+	$stmt->execute();
+	// Store the result so we can check if the account exists in the database.
+	$stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($id, $password);
+        $stmt->fetch();
+        // Account exists, now we verify the password.
+        // Note: remember to use password_hash in your registration file to store the hashed passwords.
+        if ($_POST['password'] === $password) {
+            // Verification success! User has logged-in!
+            // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+            session_regenerate_id();
+            $_SESSION['loggedin'] = TRUE;
+            $_SESSION['name'] = $_POST['username'];
+            $_SESSION['id'] = $id;
+            echo 'Welcome ' . $_SESSION['name'] . '!';
+        } else {
+            // Incorrect password
+            echo 'Incorrect username and/or password!';
         }
+    } else {
+        // Incorrect username
+        echo 'Incorrect username and/or password!';
     }
-    
-    // Close connection
-    mysqli_close($link);
+
+	$stmt->close();
 }
+
 ?>

@@ -72,8 +72,8 @@
                     }        
                 ?>
                 <form action="login.php" method="post">
-                    <input type="text" name="username" placeholder="pat OR lib" value="<?php echo $username; ?>"/>
-                    <input type="password" placeholder="123"/>
+                    <input type="text" name="username" placeholder="username = pat OR lib" id="username" required/>
+                    <input type="password" name="password" placeholder="password = 123" id="password" required/>
                     <button type="submit">login</button>
                 </form>
   </div>
