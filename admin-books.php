@@ -25,10 +25,10 @@
         <h2>Serving readers since 1994</h2>
         <div id='border'>
             <span class='entry'>
-                <h3>Title</h3>
-                <h3>Author</h3>
-                <h3>ISBN</h3>
-                <h3>Copies</h3>
+                <h3 class='title'>Title</h3>
+                <h3 class='author'>Author</h3>
+                <h3 class='isbn'>ISBN</h3>
+                <h3 class='copies'>Copies</h3>
             </span>
             <?php 
                 $sql = "SELECT title, author, ISBN, copies FROM books";
@@ -38,10 +38,14 @@
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
                     echo "<span class='entry'>
-                            <p> {$row["title"]} </p>
-                            <p> {$row["author"]} </p>
-                            <p> {$row["ISBN"]} </p>
-                            <p> {$row["copies"]} </p>
+                            <p class='title'> {$row["title"]} </p>
+                            <p class='author'> {$row["author"]} </p>
+                            <p class='isbn'> {$row["ISBN"]} </p>
+                            <p class='copies'> {$row["copies"]} </p>
+                            <p class='icons'>
+                                <i class='fas fa-edit'></i>
+                                <i class='fas fa-trash-alt'></i>
+                            </p>
                         </span>";
                 }
                 } else {
