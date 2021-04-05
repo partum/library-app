@@ -3,8 +3,8 @@
 session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+if((isset($_SESSION["loggedin"])) && ($_SESSION["name"] == 'lib')){ //change this to account type
+    header("location: admin-page.php");
     exit;
 }
  
