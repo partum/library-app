@@ -76,12 +76,8 @@
                     <input type="password" name="password" placeholder="password = 123" id="password" required/>
                     <button type="submit">login</button>
                 </form>
-  </div>
-<?php
-echo "Hello World!";
-?>
-        
-        
+            </div>
+    
         <script src="script.js" async defer></script>
     </body>
 </html>

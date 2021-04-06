@@ -130,9 +130,8 @@ article {
   font-size: 14px;
   border: 1px solid #17bebb;
 }
-.form button {
+button {
   font-family: "Rosario";
-  text-transform: uppercase;
   outline: 0;
   background: #faa916;
   width: 100%;
@@ -145,10 +144,13 @@ article {
   cursor: pointer;
   border-radius: 10px;
 }
-.form button:hover,
-.form button:active,
-.form button:focus {
+button:hover,
+button:active,
+button:focus {
   background: #17bebb;
+}
+.small-button {
+  width: 150px;
 }
 .form .message {
   margin: 15px 0 0;

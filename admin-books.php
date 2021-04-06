@@ -19,8 +19,10 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <input type="text" placeholder="Search for a book..." id='search'> 
-        <button>log out</button>
+        <form onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" action="search.php">
+            <input type="text" placeholder="Search for a book..." id='search' name='query'>
+        </form> 
+        <button class='small-button'>log out</button>
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
         <div id='border'>
@@ -53,6 +55,8 @@
                 }
                 $link->close();
             ?>
+            <button class='small-button'>Add Books</button>
         </div>
     </body>
 </html>
+
