@@ -22,7 +22,7 @@
         <form onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" action="search.php">
             <input type="text" placeholder="Search for a book..." id='search' name='query'>
         </form> 
-        <button class='small-button'>log out</button>
+        <button class='small-button log-out'>Log Out</button>
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
         <div id='border'>
@@ -45,7 +45,8 @@
                             <p class='isbn'> {$row["ISBN"]} </p>
                             <p class='copies'> {$row["copies"]} </p>
                             <p class='icons'>
-                                <i class='fas fa-edit'></i>
+                                <a href='edit-book.php/?key={$row["ISBN"]}'>
+                                <i class='fas fa-edit'></i></a>
                                 <i class='fas fa-trash-alt'></i>
                             </p>
                         </span>";
@@ -55,8 +56,9 @@
                 }
                 $link->close();
             ?>
-            <button class='small-button'>Add Books</button>
+            <button class='small-button add-button'>Add Books</button>
         </div>
     </body>
 </html>
 
+ <!-- <a href='edit-book.php/?title=\"" .urlencode($row["title"]). "\"&author=\"" .urlencode($row["author"]). "\"&isbn={$row["ISBN"]}&copies={$row["copies"]}'>  -->

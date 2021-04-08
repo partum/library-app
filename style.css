@@ -233,6 +233,15 @@ a:hover {
   grid-column: 3/4;
   grid-row: 2/3;
 }
+.add-button {
+  position: absolute;
+  right: 25%;
+}
+.log-out {
+  width: 100px;
+  position: absolute;
+  left: 70%;
+}
 @media only screen and (min-width: 376px) {
   body {
     padding: 87px 122px;
@@ -303,5 +312,13 @@ a:hover {
   .icons {
     grid-column: 5/6;
     grid-row: 1/2;
+  }
+  .add-button {
+    right: 40%;
+  }
+  .log-out {
+    width: 150px;
+    position: absolute;
+    left: 80%;
   }
 }
