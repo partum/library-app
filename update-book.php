@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add a Book</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -17,18 +17,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <form action="add-entry.php">
-            <label for="">Title</label>
-            <input type="text" name='title'>
-            <label for="">Author</label>
-            <input type="text" name='author'>
-            <label for="">ISBN</label>
-            <input type="text" name='isbn' maxlength='9'>
-            <label for="">Copies</label>
-            <input type="text" name='copies' maxlength='2'>
-            <button type="submit">Add</button>
-        </form>
         
+        <?php echo 'hi'; ?>
     </body>
 </html>
-

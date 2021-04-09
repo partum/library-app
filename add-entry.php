@@ -32,6 +32,7 @@
               
               $link->close();
         ?>
-       
+       <a href="add-book.php">add another book</a>
+       <a href="admin-books.php">return to book admin page</a>
     </body>
 </html>
