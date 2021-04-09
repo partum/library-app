@@ -19,10 +19,12 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <form onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" action="search.php">
-            <input type="text" placeholder="Search for a book..." id='search' name='query'>
-        </form> 
-        <button class='small-button log-out'>Log Out</button>
+       
+            <form onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" action="search.php">
+                <input type="text" placeholder="Search for a book..." id='search' name='query'>
+            </form> 
+            <a href="logout.php" class='log-out'><i class="fas fa-sign-out-alt"></i></a>
+        
         <h1>Moriarty Library</h1>
         <h2>Serving readers since 1994</h2>
         <div id='border'>

@@ -227,6 +227,7 @@ a:hover {
 .copies {
   grid-column: 2/3;
   grid-row: 2/3;
+  text-align: center;
 }
 .icons {
   color: #faa916;
@@ -238,9 +239,16 @@ a:hover {
   right: 25%;
 }
 .log-out {
-  width: 100px;
+  height: 32px;
+  width: 32px;
+  font-size: 31px;
+  color: #faa916;
+  border: none;
+  background-color: white;
+  padding: 0;
   position: absolute;
-  left: 70%;
+  top: 49px;
+  right: 45px;
 }
 @media only screen and (min-width: 376px) {
   body {
