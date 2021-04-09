@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Librarian Administrator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -46,8 +46,11 @@
                             <p class='copies'> {$row["copies"]} </p>
                             <p class='icons'>
                                 <a href='edit-book.php/?key={$row["ISBN"]}'>
-                                <i class='fas fa-edit'></i></a>
-                                <i class='fas fa-trash-alt'></i>
+                                    <i class='fas fa-edit'></i>
+                                </a>
+                                <a href='delete-book.php/?key={$row["ISBN"]}'>
+                                    <i class='fas fa-trash-alt'></i>
+                                </a>
                             </p>
                         </span>";
                 }
