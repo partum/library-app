@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <?php 
-            include("config.php");
+            include("scripts/config.php");
             ob_start();
         ?>
         <!-- This page displays the book info as text input and lets the user update the content-->

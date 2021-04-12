@@ -1,5 +1,5 @@
 <?php
-    include("config.php");
+    include("scripts/config.php");
     $key = $_GET["key"];
     $sql = "DELETE FROM books WHERE ISBN = '$key'";
     if ($link->query($sql) === TRUE) {

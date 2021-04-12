@@ -9,7 +9,7 @@ if((isset($_SESSION["loggedin"])) && ($_SESSION["name"] == 'lib')){ //change thi
 }
  
 // Include config file
-require_once "config.php";
+require_once "scripts/config.php";
  
 if ($stmt = $link->prepare('SELECT id, password FROM users WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
