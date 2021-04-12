@@ -25,20 +25,23 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "{$row['title']} by {$row['author']}";
+                        echo "<p>{$row['title']} by {$row['author']}</p>";
                     }
                 } else {
-                    $sql = "SELECT author, title FROM books WHERE author LIKE '%{$search}%'";
-                    $result = $link->query($sql);
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            echo "{$row['title']} by {$row['author']}";
-                        }
-                    }else{
-                        echo "0 results";
-                    } 
+                    echo "No titles like {$search}";
                 }
+                
+                $sql = "SELECT author, title FROM books WHERE author LIKE '%{$search}%'";
+                $result = $link->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo "<p>{$row['title']} by {$row['author']}</p>";
+                    }
+                }else{
+                    echo "No authors like {$search}";
+                } 
+                
                 $link->close();
         ?>
     </body>

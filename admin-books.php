@@ -61,7 +61,7 @@
                 }
                 $link->close();
             ?>
-            <button class='small-button add-button'>Add Books</button>
+            <a href="add-book.php"><button class='small-button add-button'>Add Books</button></a>
         </div>
     </body>
 </html>
