@@ -36,6 +36,11 @@ h2 {
   position: absolute;
   top: 183px;
 }
+h1 + h2 {
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
 h3 {
   font-family: Rosario;
   font-style: normal;
@@ -59,11 +64,11 @@ h3 {
 #book-list {
   background: white;
   border-radius: 10px;
-  height: 600px;
   padding: 20px 23px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: auto;
 }
 #search {
   width: 197px;
@@ -108,13 +113,45 @@ article {
   width: 300px;
   top: 10vh;
   right: 7px;
-  display: none;
+  /* display: none; */
   background-color: white;
   position: absolute;
   z-index: 10;
   padding: 8%;
+  transition: opacity 0.15s ease-out, width 0s linear 0.15s,
+    height 0s linear 0.15s;
+  /*new stuff*/
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: opacity 0.15s ease-out, width 0s linear 0.15s,
+    height 0s linear 0.15s;
 }
-
+#login-menu.visible {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+  box-sizing: border-box;
+}
+.modal {
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 45px;
+  border-radius: 10px;
+}
 .form {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -250,7 +287,7 @@ a:hover {
   top: 49px;
   right: 45px;
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 778px) {
   body {
     padding: 87px 122px;
     text-align: left;
@@ -328,5 +365,13 @@ a:hover {
     width: 150px;
     position: absolute;
     left: 80%;
+  }
+  .modal {
+    width: 600px;
+  }
+  h1 + h2 {
+    text-align: auto;
+    width: auto;
+    left: auto;
   }
 }

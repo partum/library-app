@@ -11,6 +11,7 @@
         <meta name="description" content="a library app">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/jpg" href="dummybook.jpg"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -58,7 +59,7 @@
                     echo '<div class="alert alert-danger">' . $login_err . '</div>';
                     }        
                 ?> -->
-                <form action="login.php" method="post">
+                <form action="login.php" method="post" class='modal'>
                     <input type="text" name="username" placeholder="username = lib" id="username" required/>
                     <input type="password" name="password" placeholder="password = 123" id="password" required/>
                     <button type="submit">login</button>
