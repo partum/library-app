@@ -5,34 +5,23 @@
 //   menu.style.display = "block";
 // }
 
-//window.addEventListener("load", setup);
-
-const get = document.getElementById.bind(document);
-const query = document.querySelector.bind(document);
-
+let modalRoot = document.getElementById("login-menu");
 function loginMenu() {
-  let modalRoot = document.getElementById("login-menu");
   let button = document.getElementById("login-button");
-  let modal = document.querySelector(".modal");
-
-  modalRoot.addEventListener("click", rootClick);
   button.addEventListener("click", openModal);
-  modal.addEventListener("click", modalClick);
-
-  function rootClick() {
-    modalRoot.classList.remove("visible");
-  }
 
   function openModal() {
     modalRoot.classList.add("visible");
   }
-
-  function modalClick(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
-    return false;
-  }
 }
 
 loginMenu();
+
+window.addEventListener("click", function(e) {
+  if (
+    !document.getElementById("login-button").contains(e.target) &&
+    !document.getElementsByClassName("modal")[0].contains(e.target)
+  ) {
+    modalRoot.classList.remove("visible");
+  }
+});
