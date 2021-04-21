@@ -28,7 +28,7 @@
                         echo "<p>{$row['title']} by {$row['author']}</p>";
                     }
                 } else {
-                    echo "No titles like {$search}";
+                    echo "<p>No titles like {$search}</p>";
                 }
                 
                 $sql = "SELECT author, title FROM books WHERE author LIKE '%{$search}%'";
@@ -39,7 +39,7 @@
                         echo "<p>{$row['title']} by {$row['author']}</p>";
                     }
                 }else{
-                    echo "No authors like {$search}";
+                    echo "<p>No authors like {$search}</p>";
                 } 
                 
                 $link->close();

@@ -15,7 +15,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <?php include("scripts/config.php")?>
+        <?php include("scripts/config.php");
+            // Check if the user is already logged in, if yes then redirect him to welcome page
+            if((isset($_SESSION["loggedin"])) && ($_SESSION["name"] == 'lib')){ //change this to account type
+                header("location: admin-page.php");
+                exit;
+            }
+        ?>
     </head>
     <body>
         

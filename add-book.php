@@ -10,14 +10,15 @@
         <title>Add a Book</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
         <?php include("scripts/config.php")?>
+        <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <form action="add-entry.php">
+        <form action="add-entry.php" class="admin">
             <label for="">Title</label>
             <input type="text" name='title'>
             <label for="">Author</label>
@@ -26,7 +27,7 @@
             <input type="text" name='isbn' maxlength='9'>
             <label for="">Copies</label>
             <input type="text" name='copies' maxlength='2'>
-            <button type="submit">Add</button>
+            <button type="submit" class='small-button'>Add</button>
         </form>
         
     </body>

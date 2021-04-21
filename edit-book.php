@@ -10,7 +10,7 @@
         <title>Add a Book</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <?php 
             include("scripts/config.php");
             ob_start();
@@ -63,7 +63,7 @@
             }   
         ?>
 
-        <form method="POST">
+        <form method="POST" class='admin'>
             <label for="">Title</label>
             <input type="text" name='title' value=<?php echo $title ?>>
             <label for="">Author</label>
@@ -79,5 +79,3 @@
     </body>
 </html>
 
-<!-- UPDATE `books` SET `ISBN` = '935215736' WHERE `books`.`ISBN` = 935285736; 
-UPDATE `books` SET `Author` = 'Homer.' WHERE `books`.`ISBN` = 935215736;  -->
